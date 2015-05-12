@@ -3,17 +3,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = Hash.new
-    if params[:username] == 'userName01'
-      @user[:name] = 'rails test'
-      @user[:username] = 'userName01'
-      @user[:location] = 'Tokyo, Japan'
-      @user[:about] = 'Nice to meet you.'
+    if params[:username] == 'railstest'
+      @user = User.find_by(:username => 'railstest')
     elsif params[:username] == 'yamada'
-      @user[:name] = 'yamada tarou'
-      @user[:username] = 'yamada'
-      @user[:location] = 'Tokyo, Japan'
-      @user[:about] = 'Nice to meet you.'
+      @user = User.find_by(:username => 'yamada')
     end
   end
 end
+
+
