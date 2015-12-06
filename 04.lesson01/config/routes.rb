@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'say_hello/hello_world'
   post 'say_hello/hello_world'
 
+  match ':controller(/:action(/:id))', via: [:get, :post, :patch]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
