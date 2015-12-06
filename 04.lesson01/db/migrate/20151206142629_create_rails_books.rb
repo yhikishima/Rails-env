@@ -1,15 +1,14 @@
-class CreateBooks < ActiveRecord::Migration
+class CreateRailsBooks < ActiveRecord::Migration
   def change
-    create_table :books do |t|
+    create_table :rails_books do |t|
       t.string :isbn
       t.string :title
-      t.string :price
       t.integer :price
       t.string :publish
       t.date :published
       t.boolean :cd
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

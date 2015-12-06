@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>タイトル</th>
+  </tr>
+<% @railsBooks.each do |book| %>
+  <tr>
+    <td><%= book.id %></td>
+    <td><%= book.title %></td>
+  </tr>
+<% end %>
+</table>
