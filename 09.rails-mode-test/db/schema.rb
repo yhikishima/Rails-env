@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516002113) do
+ActiveRecord::Schema.define(version: 20160518000156) do
 
   create_table "foos", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -60,6 +67,13 @@ ActiveRecord::Schema.define(version: 20160516002113) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "uuid"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
