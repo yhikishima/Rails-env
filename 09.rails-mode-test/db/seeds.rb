@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Student.create(:name => '岡野弘', :birthday => '2000/06/28')
+Student.create(:name => '橘通', :birthday => '2000/04/28')

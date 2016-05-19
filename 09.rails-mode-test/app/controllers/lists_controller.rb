@@ -3,9 +3,9 @@ class ListsController < ApplicationController
 
   # GET /lists
   def index
-    @lists = List.all
+    @Students = Student.all
 
-    render json: @lists
+    render json: @Students
   end
 
   # GET /lists/1
