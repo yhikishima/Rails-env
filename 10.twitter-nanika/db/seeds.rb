@@ -26,3 +26,8 @@
 @user.location = 'Tokyo'
 @user.about = 'hogehogehogehoge!!!!!!!!'
 @user.save
+
+@user = Tweet.new
+@user.title = 'Tweet title'
+@user.content = 'Tweet, so tweet is a best effort for many people'
+@user.save
